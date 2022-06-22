@@ -1,0 +1,542 @@
+/* --- fonts importadas --- */
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url("https://use.typekit.net/ndt8bmt.css");
+@font-face {
+    font-family: "Neo Latina";
+    src: url(../Imagens/neo-latina-demo-FFP.ttf);
+}
+
+/* --- geral --- */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: source-code-pro, monospace;
+    /* font-weight: 600; */
+    font-style: normal;
+}
+
+body{
+    background-color: #262626;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* --- Menu --- */
+
+.menu-container{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    background: #262626ef;
+}
+
+header{
+    width: 90%;
+    height: 10vh;
+    max-width: 1400px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 0;
+}
+
+/* --- logo --- */
+
+.logo{
+    width: 24vh;
+    padding: 10px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+/* --- redes sociais --- */
+
+.redes-sociais{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais > a:hover{
+    font-size: 1.1em;
+}
+
+.sociais{
+    font-size: 3em;
+    color: #e44e4e;
+}
+
+/* --- Icone Menu --- */
+
+.menu-btn{
+    width: 44%;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.menu-btn .icon-menu{
+    font-size: 4em;
+    color: #e44e4e;
+}
+
+.menu-aberto {
+    width: 0;
+    max-width: 600px;
+    height: 100vh;
+
+    overflow: hidden;
+    z-index: 1000;
+
+    position: fixed;
+    transition: 0.5s;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: rgb(14 40 78 / 32%);
+    backdrop-filter: blur(8px);
+}
+  
+.menu > .menu-btn > i:hover{
+    color: #912323;
+    transform: translateZ(50px);
+}
+  
+.menu-aberto li a, .menu-aberto h1 a {
+    display: inline-block;
+    margin: 10px 5px;
+    color: #e44e4e;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25 ease-in-out;
+  }
+  
+  li a:hover {
+    border-bottom: 3px solid #FCAB4C;
+  }
+/*-----finalização header----*/
+
+/* --- main --- */
+
+main{
+    width: 100%;
+}
+
+/* --- banner ---*/
+.banner{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../Imagens/banner-img-index.png);
+    background-size: 100% 100%;
+}
+
+/*paralax*/
+
+section.module {
+    margin-bottom: 40px 0;
+  }
+  
+  section.module:last-child {
+    margin-bottom: 0;
+  }
+  
+  section.module.content {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  section.module.paralax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100% !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  section.module.paralax:after {
+    content: "";
+    height: 100%;
+    width: 100vw !important;
+    position: absolute;
+    z-index: 8;
+  
+    background: -moz-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 48%,
+      #000 100%
+    );
+    background: -webkit-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 48%,
+      #000 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 48%,
+      #000 100%
+    );
+  }
+  
+  section.module.paralax-1 {
+    background-image: url(../Imagens/banner-img-index.png);
+  }
+  
+  section.module.paralax-2 {
+    background-image: url(../Imagens/banner-img-index.png);
+  }
+
+/* --- venha conhecer a ETEC --- */
+
+.conheca-etec{
+    width: 50%;
+    max-width: 1400px;
+    margin: 6% auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conheca-etec h1{
+    margin: 5% 0;
+
+    font-family: "Neo Latina";
+    font-size: 3.8em;
+    text-align: center;
+
+    color: #4e8ce4;
+}
+
+.conheca-etec p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+
+    color: #706E6E;
+}
+
+/* --- Acesso Rapido --- */
+
+.acesso-rapido{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.acessos{
+    width: calc(72% / 3);
+    margin-bottom: 2%;
+    position: relative;
+    background-color: #4e8ce4;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.acessos img{
+    width: 100%;
+    height: 100%;
+    transition: transform .25s .35s;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translateY(-1000px);
+    transition: transform .5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title{
+    font-family: "Neo Latina";
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.descricao{
+    font-size: 0.8em;
+}
+
+.btn-vest{
+    padding: 3%;
+    border-radius: 30px;
+    
+    color: white;
+    font-size: 1.1em;
+
+    display: flex;
+    align-items: center;
+
+    background-color: red;
+    transition: background-color .25s;
+}
+
+.more{
+    margin-left: 10px;
+}
+
+.btn-vest:hover{
+    background-color: rgba(0, 0, 0, 0.521);
+    color: #fff;
+}
+
+.acessos:hover .texto{
+    transform: translateY(0px);
+}
+
+.acessos:hover img{
+    transform: translateX(1000px);
+    transition-delay: 0s;
+}
+
+/* Hashtag da pagina */
+.hashtag{
+    font-size: 30px;
+    margin-top: 5%;
+    margin-left: 8%;
+    color: #4e8ce4;
+}
+
+/* parte de noticias */
+.noticias{
+    width: 100%;
+    background-color: #0e284e;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticias h1{
+    margin: 2% 0 0px 0;
+    font-family: "Neo Latina";
+    font-size: 3em;
+    text-align: center;
+    color: #4e8ce4;
+}
+
+.container-noticias{
+    width: 80%;
+    margin: 2% auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.column-left{
+    width: calc(100%/2.5);display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column-left .n-1{
+    display: flex;
+    align-items: center;
+    /* margin: 15% 0; */
+    transition: 0.5s;
+}
+
+.column-left .n-1 img{
+    width: calc(100%/2);
+}
+
+.n-1 h2{
+    color: #4e8ce4;
+    font-family: "Neo Latina";
+    margin: 0 5%;
+}
+
+.principal{
+    width: calc(100% / 2.5);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.principal img{
+    width: 100%;
+}
+
+.principal .principal-description{
+    /* bottom: 10em; */
+    margin: 5% 3%;
+    color: #706e6e;
+}
+
+.principal .principal-description h2{
+    margin-bottom: 5%;
+    color: #e44e4e;
+    font-family: "Neo Latina";
+    font-size: 3.4em;
+}
+
+.principal-description p{
+    margin: 2% 0;
+}
+
+.n-1:hover{
+    background-color: #284368;
+}
+
+.principal:hover{
+    background-color: #284368;
+}
+
+hr{
+    width: 95%;
+    height: 2px;
+    background-color: #041c3f;
+    /* margin: 0; */
+    border: 0;
+}
+
+/*rodape*/
+
+footer{
+    width: 100%;
+    background: rgb(18 53 106);
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+}
+
+.container-footer{
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.socias-foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.socias-foot p{
+    font-size: 13px;
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.redes > a:hover{
+    font-size: 1.3em;
+}
+
+.apm{
+    font-size: 13px;
+}
+
+/* medias screen */
+@media screen and (max-width: 1000px){
+
+    /* acesso rapido */
+    .acessos{width: calc(85% / 2);}
+
+    /* conheca a etec */
+    .conheca-etec{width: 80%;}
+    .conheca-etec h1{font-size: 3em;}
+    .conheca-etec p{font-size: 1.2em;}
+
+    /*footer */
+    /* footer */
+    .container-footer{flex-direction: column; align-items: center;}
+    .socias-foot{margin: 3% 0;}
+    .container-footer{text-align: center;}
+    footer .sociais{font-size: 1.5em;}
+}
+@media screen and (max-width: 800px){
+    /* menu */
+    header{width: 100%;padding: 3% 4%;}
+    .menu-btn .icon-menu {font-size: 4em;}
+    .sociais{font-size: 1.8em;}
+
+    /* acesso rapido */
+    .acesso-rapido{flex-direction: column; align-items: center;}
+    .acessos{width: 65%; margin-bottom: 5%;}
+    .hashtag {font-size: 1.5em; margin-top: 3%; margin-left: 2%;}
+
+    /* noticias */
+    .noticias h1{font-size: 2em;}
+    .container-noticias{flex-direction: column-reverse; align-items: center;}
+    .column-left{width: 90%;}
+    .principal{width: 90%; margin-top: 5%;}
+}
+@media screen and (max-width: 425px){
+
+    /* menu */
+    .redes-sociais{display: none;}
+    .menu-aberto li a, .menu-aberto h1 a {
+        font-size: 1.3em;
+      }    
+
+    /* parte do conheça */
+    .conheca-etec{width: 100%;}
+    .acessos{width: 80%;}
+    .title{font-size: 22px;}
+
+    /* acesso rapido */
+    .acessos{width: 90%;}
+    .descricao{font-size: 13px;}
+
+    /* noticias recentes */
+    .container-noticias{width: 100%;}
+    .principal{width: 100%;}
+}
